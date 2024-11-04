@@ -1,19 +1,16 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import { AppBar } from '@mui/material';
+import { Box } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { IconButton } from '@mui/material';import Typography from '@mui/material/Typography';
+import { Menu } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { Theme } from '@mui/material/styles';
-
+import { Container } from '@mui/material';
+import { Avatar } from '@mui/material';
+import { Button } from '@mui/material';
+import { Tooltip } from '@mui/material';
+import { MenuItem } from '@mui/material';
+import { Adb } from '@mui/icons-material';
 
 const pages = ['Work', 'Blog', 'Media and Me'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -43,6 +40,7 @@ export const ResponsiveAppBar = () => {
         sx={{
         backgroundColor: 'transparent',
         boxShadow: 'none',
+        height: '80px',
         }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -98,7 +96,7 @@ export const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Adb sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -131,7 +129,7 @@ export const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Black Bear" src="https://c8.alamy.com/comp/E56KPM/cartoon-black-bear-E56KPM.jpg" />
+                <Avatar alt="Black Bear" src="src\assets\finalBlackBear.png" />
               </IconButton>
             </Tooltip>
             <Menu
